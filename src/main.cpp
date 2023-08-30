@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 
+#include "../h/main.hpp"
+
 class calc 
 {
     double max {};
@@ -13,29 +15,28 @@ class calc
     std::vector<double>  prod  {     };
     std::vector<double>  quo   {     };
 
-    int main()
+    void main()
     {
        std::cout << "hey kid pick a numba\n";
        std::cin >> max;
        std::cout << "good choice, here's ya stuff\n";
     }
 
-    double num()
+    int num()
     {
         for (double i {0}; i < max; i++)
         {
             num1[i] = i;
             num2[i] = i;
-            max = i;
         }
     }
 
-    double equation()
+    int equation()
     {
-        double k{};
-        for (double i = 0; i < max; i++) 
+        int k{};
+        for (int i = 0; i < max; i++) 
         {
-            for (double j = 0; j < max; j++) {
+            for (int j = 0; j < max; j++) {
                 double e{}, n{};
                 num1[i]  =  e;
                 num2[j]  =  n;
@@ -48,14 +49,14 @@ class calc
         }
     }
 
-    int debug()
+    void debug()
     {
         for(int i = 0; i < max; i++)
         {
-            std::cout << num1[i] << " + " << num2[i] << " = " << sum[i] << "\n";
+            std::cout << num1[i] << " + " << num2[i] << " = " << sum[i]  << "\n";
             std::cout << num1[i] << " - " << num2[i] << " = " << diff[i] << "\n";
             std::cout << num1[i] << " * " << num2[i] << " = " << prod[i] << "\n";
-            std::cout << num1[i] << " / " << num2[i] << " = " << quo[i] << "\n";
+            std::cout << num1[i] << " / " << num2[i] << " = " << quo[i]  << "\n";
         }
         
     }
